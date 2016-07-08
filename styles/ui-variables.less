@@ -1,5 +1,78 @@
 @import "syntax-variables";
 
+
+//------------------------------[ Start Bjorn's Colors ]------------------------------
+
+/*
+ * Apple iOS color scheme
+ *
+ *   https://developer.apple.com/ios/human-interface-guidelines/visual-design/color/
+ */
+@ios-red:       hsl(3, 100%, 59%);
+@ios-orange:    hsl(35, 100%, 50%);
+@ios-yellow:    hsl(48, 100%, 50%);
+@ios-green:     hsl(130, 65%, 57%);
+@ios-teal-blue: hsl(199, 94%, 67%);
+@ios-blue:      hsl(211, 100%, 50%);
+@ios-purple:    hsl(241, 61%, 59%);
+@ios-pink:      hsl(349, 100%, 59%);
+
+/*
+ * Google Material Design - 500 versions
+ *
+ *   https://www.materialui.co/colors
+ *   http://htmlcolorcodes.com/color-chart/material-design-color-chart/
+ */
+@material-red:         hsl(4, 90%, 58%);
+@material-pink:        hsl(340, 82%, 52%);
+@material-purple:      hsl(291, 64%, 42%);
+@material-deep-purple: hsl(262, 52%, 47%);
+@material-indigo:      hsl(231, 48%, 48%);
+@material-blue:        hsl(207, 90%, 54%);
+@material-light-blue:  hsl(199, 98%, 48%);
+@material-cyan:        hsl(187, 100%, 42%);
+@material-teal:        hsl(174, 100%, 29%);
+@material-green:       hsl(122, 39%, 49%);
+@material-light-green: hsl(88, 50%, 53%);
+@material-lime:        hsl(66, 70%, 54%);
+@material-yellow:      hsl(54, 100%, 62%);
+@material-amber:       hsl(45, 100%, 51%);
+@material-orange:      hsl(36, 100%, 50%);
+@material-deep-orange: hsl(14, 100%, 57%);
+@material-brown:       hsl(16, 25%, 38%);
+@material-grey:        hsl(0, 0%, 62%);
+@material-blue_grey:   hsl(200, 18%, 46%);
+
+/*
+ * Flat UI
+ *
+ *   https://www.materialui.co/flatuicolors
+ *   http://htmlcolorcodes.com/color-chart/flat-design-color-chart/
+ */
+ @flat-amethyst:      hsl(283, 39%, 53%);
+ @flat-wisteria:      hsl(282, 44%, 47%);
+ @flat-peter-river:   hsl(204, 70%, 53%);
+ @flat-belize-hole:   hsl(204, 64%, 44%);
+ @flat-turquoise:     hsl(168, 76%, 42%);
+ @flat-green-sea:     hsl(168, 76%, 36%);
+ @flat-emerald:       hsl(145, 63%, 49%);
+ @flat-nephritis:     hsl(145, 63%, 42%);
+ @flat-sunflower:     hsl(48, 89%, 50%);
+ @flat-orange:        hsl(37, 90%, 51%);
+ @flat-carrot:        hsl(28, 80%, 52%);
+ @flat-pumpkin:       hsl(24, 100%, 41%);
+ @flat-alizarin:      hsl(6, 78%, 57%);
+ @flat-pomegranate:   hsl(6, 63%, 46%);
+ @flat-clouds:        hsl(192, 15%, 94%);
+ @flat-silver:        hsl(204, 8%, 76%);
+ @flat-concrete:      hsl(184, 9%, 62%);
+ @flat-asbestos:      hsl(184, 6%, 53%);
+ @flat-wet-asphalt:   hsl(210, 29%, 29%);
+ @flat-midnight-blue: hsl(210, 29%, 24%);
+
+//-------------------------------[ End Bjorn's Colors ]-------------------------------
+
+
 // UI Theme colors -------------------------------------------------------------
 @theme-text-color-highlight: rgb(255, 255, 255);
 @theme-text-color-accent:    mix(@syntax-text-color, @theme-text-color-highlight, 50%);
@@ -10,10 +83,12 @@
 @theme-background-color-dark:  desaturate(darken(@syntax-background-color, 4%), 2%);
 @theme-background-color-light: desaturate(lighten(@syntax-background-color, 6%), 2%);
 
-@theme-blue:   @syntax-color-renamed;
-@theme-green:  @syntax-color-added;
-@theme-orange: @syntax-color-modified;
-@theme-red:    @syntax-color-removed;
+@theme-green:  @ios-green;   // Origonal: @syntax-color-added;
+@theme-blue:   @ios-blue;    // Original: @syntax-color-renamed;
+@theme-orange: @ios-orange;  // Original: @syntax-color-modified;
+@theme-red:    @ios-red;     // Original: @syntax-color-removed;
+
+
 
 // Editor colors ---------------------------------------------------------------
 @theme-syntax-text-color:            @syntax-text-color;
